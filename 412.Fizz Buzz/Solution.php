@@ -18,11 +18,10 @@ class Solution
      */
     function fizzBuzz($n)
     {
-        $arr = range(1, $n);
         $result = [];
-        foreach ($arr as $i) {
-            $isDivisibleByFive = is_int($i / 5);
-            $isDivisibleByThree = is_int($i / 3);
+        for ($i = 1; $i <= $n; $i++) {
+            $isDivisibleByFive = ($i % 5 == 0);
+            $isDivisibleByThree = ($i % 3 == 0);
             if ($isDivisibleByFive && $isDivisibleByThree) {
                 $result[] = "FizzBuzz";
             } elseif (!$isDivisibleByFive && $isDivisibleByThree) {
