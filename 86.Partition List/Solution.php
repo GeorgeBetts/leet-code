@@ -7,7 +7,6 @@ require_once("LinkedList.php");
  */
 class Solution
 {
-
     /**
      * @param ListNode $head
      * @param Integer $x
