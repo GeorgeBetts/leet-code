@@ -20,6 +20,20 @@ class LinkedList
     }
 
     /**
+     * Returns the node at the top of the list
+     *
+     * @return ListNode|null
+     */
+    public function top(): ?ListNode
+    {
+        $currentNode = $this->head;
+        while ($currentNode->next !== null) {
+            $currentNode = $currentNode->next;
+        }
+        return $currentNode;
+    }
+
+    /**
      * Appends a new node onto a linked list at the end of the list
      *
      * @param integer $val
