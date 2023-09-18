@@ -57,12 +57,10 @@ class DoublyLinkedList
     public function printValues(): void
     {
         $currentNode = $this->bottom;
-        while ($currentNode->next !== null) {
+        while ($currentNode) {
             print_r($currentNode->val);
             $currentNode = $currentNode->next;
         }
-        // print the final node
-        print_r($currentNode->val);
         return;
     }
 
@@ -74,12 +72,10 @@ class DoublyLinkedList
     public function printValuesReverse(): void
     {
         $currentNode = $this->top;
-        while ($currentNode->previous !== null) {
+        while ($currentNode) {
             print_r($currentNode->val);
             $currentNode = $currentNode->previous;
         }
-        // print the final node
-        print_r($currentNode->val);
         return;
     }
 }
