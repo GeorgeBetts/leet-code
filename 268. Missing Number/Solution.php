@@ -21,4 +21,25 @@ class Solution
         }
         return $i;
     }
+
+    /**
+     * This method avoids sorting the nums first for O(N) performance
+     *
+     * @param Integer[] $nums
+     * @return Integer
+     */
+    public function missingNumberAlternate($nums)
+    {
+        $count = count($nums);
+        $hashTable  = [];
+        for ($i = 0; $i < $count; $i++) {
+            $hashTable[$nums[$i]] = true;
+        }
+        for ($i = 0; $i < $count; $i++) {
+            if (!isset($hashTable[$i])) {
+                return $i;
+            }
+        }
+        return $i;
+    }
 }
